@@ -21,19 +21,12 @@ public class Game : MonoBehaviour
        // Debug.Log(newCar.Make);
 
         newCar.Make = carMakeInput.GetComponent<InputField>().text;
-       // newCar.Year = carYearInput.GetComponent<InputField>().text;
+       //newCar.Year = carYearInput.GetComponent<InputField>().text;
         carMakeText.text = "Car Make: " + newCar.Make;
         carYearText.text = "Car Year: " + newCar.Year;
 
 
     }
 
-
     
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

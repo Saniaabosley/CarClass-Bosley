@@ -47,8 +47,15 @@ public class Car
             
       
         }
+
  
       
+    }
+
+    public int CurrentSpeed
+    {
+        get { return currentSpeed; }
+        set { currentSpeed = value; }
     }
 
     public void Accelrate()
