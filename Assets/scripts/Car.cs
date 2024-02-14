@@ -7,7 +7,7 @@ public class Car
 {
     private string carMake;
     private int carYear;
-    private int currentSpeed;
+    private int currentSpeed = 0;
     private int maximumSpeed;
     
 
