@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Car : MonoBehaviour
+public class Car 
 {
     private string carMake;
     private string carYear;
-    public float currentSpeed;
-    private float maximumSpeed = 100;
+    public int currentSpeed;
+    private int maximumSpeed;
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentSpeed = 0;
+        maximumSpeed = 100;
     }
 
 
