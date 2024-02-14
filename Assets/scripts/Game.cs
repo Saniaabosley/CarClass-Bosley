@@ -26,7 +26,7 @@ public class Game : MonoBehaviour
          newCar.Year = carYearInput.text;
         carMakeText.text = "Car Make: " + newCar.Make;
         carYearText.text = "Car Year: " + newCar.Year;
-        speedText.text = "Current Speed: " + newCar.CurrentSpeed;
+        speedText.text = "Current Speed: " + newCar.CurrentSpeed + "mph";
 
        
 
@@ -39,13 +39,17 @@ public class Game : MonoBehaviour
         {
             newCar.Accelrate();
             Debug.Log(newCar.CurrentSpeed);
-            speedText.text = "Current Speed: " + newCar.CurrentSpeed;
+            speedText.text = "Current Speed: " + newCar.CurrentSpeed + "mph";
+
+            
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             newCar.Decelerate();
-            speedText.text = "Current Speed: " + newCar.CurrentSpeed;
+            speedText.text = "Current Speed: " + newCar.CurrentSpeed + "mph";
+
+        
         }
     }
 

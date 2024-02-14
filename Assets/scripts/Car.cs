@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,11 +9,17 @@ public class Car
     private string carMake;
     private string carYear;
     private int currentSpeed;
-    private int maximumSpeed;
+    private int maximumSpeed = 100;
     
 
 
-    
+    public int Max
+    { 
+
+        get { return maximumSpeed; }
+
+        set { maximumSpeed = value; }
+    }
     public string Make
     {  get
         {
