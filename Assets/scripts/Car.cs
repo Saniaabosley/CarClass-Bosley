@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class Car 
 {
     private string carMake;
-    private int carYear;
-    private int currentSpeed = 0;
+    private string carYear;
+    private int currentSpeed;
     private int maximumSpeed;
     
 
@@ -27,7 +27,7 @@ public class Car
    
     }
 
-    public int Year
+    public string Year
     {
         get
         {
@@ -35,15 +35,8 @@ public class Car
         }
 
         set 
-        { 
-            if( carYear < 1886 ||carYear > 2024)
-            {
-                Debug.Log("Try again");
-            }
-            else
-            {
-                carYear = value;
-            }
+        {
+            carYear = value;
             
       
         }
@@ -60,20 +53,16 @@ public class Car
 
     public void Accelrate()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Debug.Log("placeholder");
+        
             currentSpeed++;
-        }
+        
     }
 
     public void Decelerate()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Debug.Log("placeholder");
+        
             currentSpeed--;
-        }
+        
     }
 
     // Update is called once per frame
