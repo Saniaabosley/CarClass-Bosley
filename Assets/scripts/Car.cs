@@ -6,7 +6,7 @@ public class Car
 {
     private string carMake;
     private string carYear;
-    public int currentSpeed;
+    private int currentSpeed;
     private int maximumSpeed;
 
 
@@ -21,19 +21,21 @@ public class Car
 
 
 
-    void Accelrate()
+    public void Accelrate()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("placeholder");
+            currentSpeed++;
         }
     }
 
-    void Decelerate()
+    public void Decelerate()
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Debug.Log("placeholder");
+            currentSpeed--;
         }
     }
 

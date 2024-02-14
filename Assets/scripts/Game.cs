@@ -8,6 +8,7 @@ public class Game : MonoBehaviour
     void Start()
     {
         Car newCar = new Car();
+        newCar.Accelrate();
     }
 
     // Update is called once per frame
