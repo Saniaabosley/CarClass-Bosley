@@ -1,25 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Car 
 {
     private string carMake;
-    private string carYear;
+    private int carYear;
     private int currentSpeed;
     private int maximumSpeed;
+    
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentSpeed = 0;
-        maximumSpeed = 100;
+    
+    public string Make
+    {  get
+        {
+          return carMake;
+            
+        }
+
+        set
+        {
+            carMake = value;
+        }
+   
     }
 
+    public int Year
+    {
+        get
+        {
+            return carYear;
+        }
 
-
-
+        set 
+        { 
+            if( carYear < 1886 ||carYear > 2024)
+            {
+                Debug.Log("Try again");
+            }
+            else
+            {
+                carYear = value;
+            }
+            
+      
+        }
+ 
+      
+    }
 
     public void Accelrate()
     {
