@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+//////////////////////////////////////////////
+//Assignment/Lab/Project: CarClass
+//Name: Saniaa Bosley
+//Section: SGD.213.2172
+//Instructor: Brian Sowers
+//Date: -02/19/2024
+/////////////////////////////////////////////
 
 public class Game : MonoBehaviour
 {
