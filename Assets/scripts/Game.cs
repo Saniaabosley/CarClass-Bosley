@@ -12,6 +12,7 @@ public class Game : MonoBehaviour
     public TextMeshProUGUI carMakeText;
     public TextMeshProUGUI carYearText;
     public TextMeshProUGUI speedText;
+    private int minimumSpeed = 0;
 
     Car newCar = new Car();
 
@@ -33,7 +34,8 @@ public class Game : MonoBehaviour
 
     }
 
-    private void Update()
+
+    public void carAccleration()
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
@@ -41,6 +43,11 @@ public class Game : MonoBehaviour
             Debug.Log(newCar.CurrentSpeed);
             speedText.text = "Current Speed: " + newCar.CurrentSpeed + "mph";
 
+           if (newCar.CurrentSpeed  >= 99)
+            {
+               newCar.CurrentSpeed = newCar.Max;
+            }
+             
             
         }
 
@@ -48,9 +55,18 @@ public class Game : MonoBehaviour
         {
             newCar.Decelerate();
             speedText.text = "Current Speed: " + newCar.CurrentSpeed + "mph";
+             if (newCar.CurrentSpeed  <= 0)
+            {
+               newCar.CurrentSpeed = minimumSpeed;
+            }
 
         
         }
+    }
+
+    private void Update()
+    {
+        carAccleration();
     }
 
 
